@@ -12,6 +12,17 @@
 */
 
 Route::get('/', 'Auth\AuthController@getLogin');
+Route::post('/','Auth\AuthController@postLogin');
+
+Route::get('/logout', function(){
+  \Auth::logout();
+
+ # This line is our new addition to this method
+ \Session::flash('message','You have been logged out.');
+
+ return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+
+});
 
 Route::get ('/dashboard','DashboardController@getIndex');
 

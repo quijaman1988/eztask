@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
       $user = \App\User::firstOrCreate(['email' => 'quijaman1988@gmail.com']);
       $user->first_name = 'Manuel';
       $user->last_name = 'Quijano';
-      $user->email = 'quijaman1988@harvard.edu';
+      $user->email = 'quijaman1988@gmail.com';
       $user->password = \Hash::make('password');
       $user->save();
     }

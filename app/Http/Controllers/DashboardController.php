@@ -9,6 +9,8 @@ use App\Http\Requests;
 class DashboardController extends Controller
 {
   public function getIndex() {
-     return 'List all the books';
+    $user = \Auth::user();
+
+    return view ('tasks.dashboard')->with('user',$user);
  }
 }

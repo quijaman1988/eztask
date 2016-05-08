@@ -16,7 +16,7 @@
         </ul>
     @endif
 
-    <form method='POST' action='/login'>
+    <form method='POST' action='/'>
 
         {!! csrf_field() !!}
 
