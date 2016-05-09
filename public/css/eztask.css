@@ -8,12 +8,14 @@ Flash message
     position:fixed;
     top:0;
     left:0;
-    background-color:orange;
+    background-color:#5C3353;
     font-weight:bold;
+    color:white;
 }
 
 html {
   box-sizing: border-box;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -28,10 +30,19 @@ a:link {
 html {
     position:relative;
     min-height:100%;
+    align-self: center;
+
 }
 body {
     margin:0 0 100px; /* bottom = footer height */
+    text-align: center;
+    ackground: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+
+
 }
+
 
 footer {
     position: absolute;

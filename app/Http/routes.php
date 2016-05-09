@@ -25,6 +25,8 @@ Route::get('/logout', function(){
 });
 
 Route::get ('/dashboard','DashboardController@getIndex');
+Route::get ('/task/create','DashboardController@createTask');
+Route::post('/task/create', 'DashboardController@postCreate');
 
 
 

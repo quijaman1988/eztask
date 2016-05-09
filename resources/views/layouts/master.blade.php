@@ -14,6 +14,9 @@
 
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr" crossorigin="anonymous">
+
+
 
     <link href='/css/eztask.css' rel='stylesheet'>
 
@@ -28,9 +31,10 @@
     @endif
 
     <header>
+      <br><br>
         <a href='/'>
         <img
-        src='http://www.intradiem.com/images/2x_task_green-01.png'
+        src='http://cdn.warer.com/media/Mediaware-Task-Manager-logo.png'
         alt='EZ-Task Logo'
         style="height:150px; width:150px"
         class='logo'>
@@ -52,6 +56,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')

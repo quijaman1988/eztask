@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <h1>Welcome to EZ-Task</h1>
+    <h1 style="color:white;">Welcome to EZ-Task</h1>
 
-    <p>Don't have an account? <a href='/dashboard'>Register here...</a></p>
+    <p style="color:#5E3354">Don't have an account? <a style="color:white;" href='/dashboard'>Register here</a></p>
 
-    <h3>Login</h3>
+    <h3 style="color:white;">Login</h3>
 
     @if(count($errors) > 0)
         <ul class='errors'>
@@ -21,12 +21,12 @@
         {!! csrf_field() !!}
 
         <div class='form-group'>
-            <label for='email'>Email</label>
+            <label style="color:white;" for='email'>Email</label>
             <input type='text' name='email' id='email' value='{{ old('email') }}'>
         </div>
 
         <div class='form-group'>
-            <label for='password'>Password</label>
+            <label style="color:white;" for='password'>Password</label>
             <input type='password' name='password' id='password' value='{{ old('password') }}'>
         </div>
 
@@ -35,7 +35,7 @@
             <label for='remember' class='checkboxLabel'>Remember me</label>
         </div>
 
-        <button type='submit' class='btn btn-primary'>Login</button>
+        <button style="background-color:#5E3354; color:white" type='submit' class='btn btn-primary'>Login</button>
 
     </form>
 @stop
