@@ -31,6 +31,7 @@ class TasksTableSeeder extends Seeder
         'priority' => 'Urgent',
         'type' => 'Personal',
         'date' => 'May 29th 2016',
+        'status' => 'Complete'
       ]);
 
       $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
@@ -42,6 +43,30 @@ class TasksTableSeeder extends Seeder
         'priority' => 'Urgent',
         'type' => 'School',
         'date' => 'May 14th 2016',
+      ]);
+
+      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      DB::table('tasks')->insert([
+        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'name' => 'Buy mom a present',
+        'user_id' =>$user_id,
+        'priority' => 'Urgent',
+        'type' => 'Family',
+        'date' => 'May 14th 2016',
+        'status' => 'Complete'
+      ]);
+
+      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      DB::table('tasks')->insert([
+        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'name' => 'Book a Flight for Cancun',
+        'user_id' =>$user_id,
+        'priority' => 'High',
+        'type' => 'Leisure',
+        'date' => 'May 14th 2016',
+        
       ]);
     }
 }

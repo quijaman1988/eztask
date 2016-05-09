@@ -26,7 +26,8 @@ $(window).on("load resize ", function() {
       <th style="text-align:center"><h3>Type</h3></th>
       <th style="text-align:center"><h3>Date</h3></th>
       <th style="text-align:center"><h3>Edit</h3></th>
-      <th style="text-align:center"><h3>Status</h3></th>
+      <th style="text-align:center"><h3>Delete</h3></th>
+      <th style="text-align:center"><h3>Details</h3></th>
     </tr>
   </thead>
 
@@ -34,20 +35,19 @@ $(window).on("load resize ", function() {
 
 
   @foreach ($tasks as $task)
+  @if ($task->status == 'Incomplete')
+       <tr style="background-color:#542D4B">
+  @else
+       <tr style="background-color:green">
+  @endif
 
-  <tr>
       <td>{{ $task->name}}</td>
       <td>{{ $task->priority}}</td>
       <td>{{ $task->type}}</td>
       <td>{{ $task->date}}</td>
       <td> <i class="fa fa-pencil" aria-hidden="true"></i></td>
-      <td>
-        @if ($task->status == 'Incomplete')
-             <i class="fa fa-times" aria-hidden="true"></i>
-             @else
-             <h3>marry</h3>
-             @endif
-      </td>
+      <td><i class="fa fa-times" aria-hidden="true"></i></td>
+      <td>View</td>
   </tr>
 
   @endforeach
