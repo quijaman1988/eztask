@@ -11,7 +11,7 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
       DB::table('tasks')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -22,7 +22,7 @@ class TasksTableSeeder extends Seeder
         'date' => 'May 20th 2016',
       ]);
 
-      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
       DB::table('tasks')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -34,7 +34,7 @@ class TasksTableSeeder extends Seeder
         'status' => 'Complete'
       ]);
 
-      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
       DB::table('tasks')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -45,7 +45,7 @@ class TasksTableSeeder extends Seeder
         'date' => 'May 14th 2016',
       ]);
 
-      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
       DB::table('tasks')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -57,7 +57,7 @@ class TasksTableSeeder extends Seeder
         'status' => 'Complete'
       ]);
 
-      $user_id = \App\User::where('last_name','=','Quijano')->pluck('id')->first();
+      $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
       DB::table('tasks')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -66,7 +66,7 @@ class TasksTableSeeder extends Seeder
         'priority' => 'High',
         'type' => 'Leisure',
         'date' => 'May 14th 2016',
-        
+
       ]);
     }
 }

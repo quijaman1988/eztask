@@ -11,8 +11,15 @@
 |
 */
 
+#-----------------------------------------------
+# Authentication
+#----------------------------------------------
+
 Route::get('/', 'Auth\AuthController@getLogin');
 Route::post('/','Auth\AuthController@postLogin');
+
+Route::get('/register', 'Auth\AuthController@getRegister');
+Route::post('/register', 'Auth\AuthController@postRegister');
 
 Route::get('/logout', function(){
   \Auth::logout();

@@ -8,7 +8,7 @@
 
 
 
-    <h1 style="color:white">Hi {{ $users->first_name  }}</h1>
+    <h1 style="color:white">Hi {{ $users->name  }}</h1> <br>
 
     <nav>
        <ul>

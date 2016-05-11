@@ -4,9 +4,9 @@
 
     <h1 style="color:white;">Welcome to EZ-Task</h1>
 
-    <p style="color:#5E3354">Don't have an account? <a style="color:white;" href='/dashboard'>Register here</a></p>
+    <p style="color:#5E3354">Don't have an account? <a style="color:white;" href='/register'>Register here</a></p>
 
-    <h3 style="color:white;">Login</h3>
+    <h2 style="color:white;">Login</h2>
 
     @if(count($errors) > 0)
         <ul class='errors'>
@@ -16,17 +16,20 @@
         </ul>
     @endif
 
+
+
     <form method='POST' action='/'>
 
         {!! csrf_field() !!}
 
         <div class='form-group'>
-            <label style="color:white;" for='email'>Email</label>
+            &nbsp;<label style="color:white; text-align:right" for='email'>Email:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type='text' name='email' id='email' value='{{ old('email') }}'>
         </div>
 
         <div class='form-group'>
-            <label style="color:white;" for='password'>Password</label>
+            <label style="color:white;" for='password'>Password:</label>
             <input type='password' name='password' id='password' value='{{ old('password') }}'>
         </div>
 
@@ -38,4 +41,5 @@
         <button style="background-color:#5E3354; color:white" type='submit' class='btn btn-primary'>Login</button>
 
     </form>
+
 @stop

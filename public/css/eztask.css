@@ -54,4 +54,16 @@ footer {
     text-align:center;
     padding:5px;
 }
+
+.container {
+        width: 400px;
+        clear: both;
+    }
+
+
+  .container input {
+        width: 100%;
+        clear: both;
+    }
+
 /* End Sticky Footer */
