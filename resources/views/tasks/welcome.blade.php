@@ -3,12 +3,6 @@
 @section ('head')
 <link href="/css/task.css" rel="stylesheet">
 <link href="/css/table.css" rel="stylesheet">
-<script>
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
-</script>
 @stop
 
 @section ('data')
@@ -47,7 +41,7 @@ $(window).on("load resize ", function() {
       <td>{{ $task->date}}</td>
       <td> <a style="color:white;" href="/task/edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a></td>
       <td><i class="fa fa-times" aria-hidden="true"></i> Delete</td>
-      <td>View</td>
+      <td><a style="color:white;" href="/task/detail/{{$task->id}}"><i class="fa fa-eye" aria-hidden="true"></i>View</a></td>
   </tr>
 
   @endforeach

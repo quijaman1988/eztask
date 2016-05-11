@@ -40,6 +40,8 @@ Route::get ('/dashboard','DashboardController@getIndex');
 Route::get ('/task/create','DashboardController@createTask');
 Route::post('/task/create', 'DashboardController@postCreate');
 Route::get('/task/edit', 'DashboardController@editTask');
+Route::get('/task/detail/{id?}', 'DashboardController@detailTask');
+
 
 });
 

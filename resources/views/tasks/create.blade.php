@@ -9,11 +9,12 @@
 
 @section ('data')
 
+<br>
 <h2>Add a new Task</h2>
 
 
 
-
+    <div class="container">
     <form method='POST' action='/task/create'>
 
        {{ csrf_field() }}
@@ -49,17 +50,34 @@
          <input type="date" id="date" name="date" value="{{ old('date') }}">
           <div class='error'>{{ $errors->first('date') }}</div> <br>
 
-        <label>*Priority:</label>
-        <select name='priority' id='priority'>
-          <option value="Urgent" >Urgent</option>
-          <option value="High"selected>High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
-        <br><br>
+
+
+
+         <label>URL to picture:</label>
+         <input type="text" id="url" name="url" value="{{ old('url') }}"><br>
+
+          <div class='error'>{{ $errors->first('url') }}</div> <br>
+
+          <label>Comments:</label>
+          <textarea rows="4" cols="40" name="comment" id="comment" value="{{ old('comment') }}"
+          maxlength="500">
+          </textarea>
+           <div class='error'>{{ $errors->first('comment') }}</div> <br>
+
+
+           <label>*Priority:</label>
+           <select name='priority' id='priority'>
+             <option value="Urgent" >Urgent</option>
+             <option value="High"selected>High</option>
+             <option value="Medium">Medium</option>
+             <option value="Low">Low</option>
+           </select>
+           <br><br>
+
+
 
         <div class='form-instructions'>
-           All fields are required
+           Fields with an * are required
        </div><br>
 
        <button type="submit" class="btn btn-primary">Add Task</button>
@@ -80,7 +98,7 @@
 
         </form>
 
-
+      </div>
 
 
 
