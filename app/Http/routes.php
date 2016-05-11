@@ -21,7 +21,10 @@ Route::post('/','Auth\AuthController@postLogin');
 Route::get('/register', 'Auth\AuthController@getRegister');
 Route::post('/register', 'Auth\AuthController@postRegister');
 
-Route::get('/logout', function(){
+
+Route::get('/logout', 'Auth\AuthController@logout');
+
+/*Route::get('/logout', function(){
   \Auth::logout();
 
  # This line is our new addition to this method
@@ -29,14 +32,16 @@ Route::get('/logout', function(){
 
  return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
 
-});
+}); */
+
+Route::group(['middleware' => 'auth'], function() {
 
 Route::get ('/dashboard','DashboardController@getIndex');
 Route::get ('/task/create','DashboardController@createTask');
 Route::post('/task/create', 'DashboardController@postCreate');
 Route::get('/task/edit', 'DashboardController@editTask');
 
-
+});
 
 
 

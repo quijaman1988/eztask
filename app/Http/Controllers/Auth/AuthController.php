@@ -72,4 +72,14 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function logout()
+    {
+
+        \Auth::guard($this->getGuard())->logout();
+        \Session::flash('message','You have been logged out');
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+    }
+
+  
 }
