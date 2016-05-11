@@ -39,7 +39,7 @@
       <td>{{ $task->priority}}</td>
       <td>{{ $task->type}}</td>
       <td>{{ $task->date}}</td>
-      <td> <a style="color:white;" href="/task/edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a></td>
+      <td> <a style="color:white;" href="/task/edit/{{$task->id}}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a></td>
       <td><i class="fa fa-times" aria-hidden="true"></i> Delete</td>
       <td><a style="color:white;" href="/task/detail/{{$task->id}}"><i class="fa fa-eye" aria-hidden="true"></i>View</a></td>
   </tr>
