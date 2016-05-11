@@ -36,16 +36,16 @@ $(window).on("load resize ", function() {
 
   @foreach ($tasks as $task)
   @if ($task->status == 'Incomplete')
-       <tr style="background-color:#542D4B">
+       <tr style="background-color:#F1355D">
   @else
-       <tr style="background-color:green">
+       <tr style="background-color:#7B36C1">
   @endif
 
       <td>{{ $task->name}}</td>
       <td>{{ $task->priority}}</td>
       <td>{{ $task->type}}</td>
       <td>{{ $task->date}}</td>
-      <td> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+      <td> <a style="color:white;" href="/task/edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
       <td><i class="fa fa-times" aria-hidden="true"></i></td>
       <td>View</td>
   </tr>

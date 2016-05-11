@@ -47,8 +47,11 @@ class DashboardController extends Controller
 
         return redirect('/dashboard');
 
+      }
 
+    public function editTask () {
 
+      echo "changin task";
 
   }
 
