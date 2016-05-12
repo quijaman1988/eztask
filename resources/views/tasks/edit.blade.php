@@ -88,7 +88,7 @@
            Fields with an * are required
        </div><br>
 
-       <button type="submit" class="btn btn-primary">Add Task</button>
+       <button style="background-color:#03284E" type="submit" class="btn btn-primary">Update Task</button>
 
        {{--
         <ul class=''>
