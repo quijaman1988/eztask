@@ -8,11 +8,7 @@
 @section ('data')
 <br>
 <br>
-<h1 style="color:white">All Tasks</h1>
-
-
-<span id='inc'>Incomplete Tasks</span>
-<span id='com'>Completed Task</span>
+<h1 style="color:white">Incomplete Tasks</h1>
 
 
 <div class="table-responsive">
@@ -34,13 +30,11 @@
     <tbody>
 
 
-  @foreach ($tasks as $task)
-  @if ($task->status == 'Incomplete')
-       <tr style="background-color:#B8450A">
-  @else
-       <tr style="background-color:#03284E">
-  @endif
 
+
+  @foreach ($tasks as $task)
+
+      <tr style="background-color:#B8450A">
       <td>{{ $task->name}}</td>
       <td>{{ $task->priority}}</td>
       <td>{{ $task->type}}</td>

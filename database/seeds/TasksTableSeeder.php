@@ -19,7 +19,7 @@ class TasksTableSeeder extends Seeder
         'user_id' =>$user_id,
         'priority' => 'Urgent',
         'type' => 'Billing',
-        'date' => 'May 20th 2016',
+        'date' => '2016-05-26',
       ]);
 
       $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
@@ -30,7 +30,7 @@ class TasksTableSeeder extends Seeder
         'user_id' =>$user_id,
         'priority' => 'Urgent',
         'type' => 'Personal',
-        'date' => 'May 29th 2016',
+        'date' => '2016-05-31',
         'status' => 'Complete'
       ]);
 
@@ -42,7 +42,7 @@ class TasksTableSeeder extends Seeder
         'user_id' =>$user_id,
         'priority' => 'Urgent',
         'type' => 'School',
-        'date' => 'May 14th 2016',
+        'date' => '2016-06-14',
       ]);
 
       $user_id = \App\User::where('name','=','Manuel')->pluck('id')->first();
@@ -53,7 +53,7 @@ class TasksTableSeeder extends Seeder
         'user_id' =>$user_id,
         'priority' => 'Urgent',
         'type' => 'Family',
-        'date' => 'May 14th 2016',
+        'date' => '2016-07-14',
         'status' => 'Complete'
       ]);
 
@@ -65,7 +65,7 @@ class TasksTableSeeder extends Seeder
         'user_id' =>$user_id,
         'priority' => 'High',
         'type' => 'Leisure',
-        'date' => 'May 14th 2016',
+        'date' => '2016-08-29',
 
       ]);
     }

@@ -14,8 +14,8 @@
        <ul>
               <li><a href='/dashboard'>View all Tasks</a></li>
 
-              <li><a href='/tasks/incomplete'>View Incomplete Tasks</a></li>
-               <li><a href='/tasks/complete'>View Complete Tasks</a></li>
+              <li><a href='/task/incomplete'>View Incomplete Tasks</a></li>
+               <li><a href='/task/complete'>View Complete Tasks</a></li>
                <li><a href='/task/create'>Create New Task</a></li>
                <li><a href='/logout'>Logout {{$users->name}}</a></li>
 

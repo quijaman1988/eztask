@@ -11,13 +11,34 @@ class DashboardController extends Controller
   public function getIndex() {
     $user = \Auth::user();
 
-    $tasks = \App\Task::where('user_id','=',$user->id)->get();
+    $tasks = \App\Task::where('user_id','=',$user->id)
+    ->orderBy('date','asc')->get();
+
+
 
     //dump ($tasks);
 
     return view ('tasks.welcome')->with('users',$user)
     ->with('tasks',$tasks);
  }
+
+ public function getIncomplete() {
+   $user = \Auth::user();
+   $task = \App\Task::where('user_id','=',$user->id)
+   ->where('status','=','Incomplete')->get();
+   return view ('tasks.incomplete')->with('tasks',$task)
+   ->with('users',$user);
+ }
+
+ public function getComplete() {
+
+   $user = \Auth::user();
+   $task = \App\Task::where('user_id','=',$user->id)
+   ->where('status','=','Complete')->get();
+   return view ('tasks.complete')->with('tasks',$task)
+   ->with('users',$user);
+ }
+
 
   public function createTask() {
       $user = \Auth::user();
@@ -47,8 +68,19 @@ class DashboardController extends Controller
         $task->user_id = \Auth::id();
         $task->save();
 
+        if ($detail->url_to_picture != ''){
         $detail->url_to_picture = $request->url;
+        }
+        else {
+        $detail->url_to_picture = "http://images.clipartpanda.com/task-clipart-task.svg";
+        }
+
+        if ($detail->comment != ''){
         $detail->comment = $request->comment;
+        }
+        else {
+        $detail->comment = 'none';
+      }
         $detail->task_id = $task->id;
 
         $detail->save();

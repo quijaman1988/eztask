@@ -44,6 +44,10 @@ Route::post('/task/edit/{id?}', 'DashboardController@editpostTask');
 Route::get('/task/detail/{id?}', 'DashboardController@detailTask');
 Route::get('/task/confirm-delete/{id?}', 'DashboardController@getConfirmDelete');
 Route::get('/task/delete/{id?}', 'DashboardController@getDelete');
+Route::get('/task/incomplete', 'DashboardController@getIncomplete');
+Route::get('/task/complete', 'DashboardController@getComplete');
+
+
 
 
 });
