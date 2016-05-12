@@ -10,7 +10,38 @@
 
     <h1 style="color:white">Hi {{ $users->name  }}</h1> <br>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav>
+
+
        <ul>
               <li><a href='/dashboard'>View all Tasks</a></li>
 
@@ -21,7 +52,7 @@
 
 
        </ul>
-   </nav>
+   </nav> 
 
    <section>
        {{-- Main page content will be yielded here --}}
