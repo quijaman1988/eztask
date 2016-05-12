@@ -8,7 +8,7 @@ Flash message
     position:fixed;
     top:0;
     left:0;
-    background-color:#5C3353;
+    background-color:#03284E;
     font-weight:bold;
     color:white;
 }
@@ -50,7 +50,8 @@ footer {
     bottom:0;
     height:30px;
     width:100%;
-    background-color:#ccc;
+    background-color:#03284E;
+    color:white;
     text-align:center;
     padding:5px;
 }
@@ -58,6 +59,7 @@ footer {
 .container {
         width: 400px;
         clear: both;
+        color:#03284E;
     }
 
 
@@ -67,8 +69,13 @@ footer {
     }
 
 #individual_task {
-  
+
   color:white;
+
+}
+
+.btn btn-primary {
+  background-color: #03284E;
 }
 
 /* End Sticky Footer */

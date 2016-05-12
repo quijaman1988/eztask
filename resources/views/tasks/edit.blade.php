@@ -47,7 +47,8 @@
 
 
          <label>*Due Date:</label>
-         <input type="date" id="date" name="date" value="{{ $tasks->date }}">
+         <input id="date" name="date" min="2016-01-01" max="2025-01-01" type="date" value="{{ $tasks->date }}">
+
           <div class='error'>{{ $errors->first('date') }}</div> <br>
 
 

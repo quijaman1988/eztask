@@ -38,7 +38,7 @@
             <label for='remember' class='checkboxLabel'>Remember me</label>
         </div>
 
-        <button style="background-color:#5E3354; color:white" type='submit' class='btn btn-primary'>Login</button>
+        <button style="background-color:#03284E; color:white" type='submit' class='btn btn-primary'>Login</button>
 
     </form>
 

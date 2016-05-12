@@ -34,7 +34,7 @@
       <br><br>
         <a href='/'>
         <img
-        src='http://cdn.warer.com/media/Mediaware-Task-Manager-logo.png'
+        src='/logos/logo1.png'
         alt='EZ-Task Logo'
         style="height:150px; width:150px"
         class='logo'>

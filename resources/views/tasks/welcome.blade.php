@@ -30,9 +30,9 @@
 
   @foreach ($tasks as $task)
   @if ($task->status == 'Incomplete')
-       <tr style="background-color:#F1355D">
+       <tr style="background-color:#B8450A">
   @else
-       <tr style="background-color:#7B36C1">
+       <tr style="background-color:#03284E">
   @endif
 
       <td>{{ $task->name}}</td>
@@ -40,7 +40,7 @@
       <td>{{ $task->type}}</td>
       <td>{{ $task->date}}</td>
       <td> <a style="color:white;" href="/task/edit/{{$task->id}}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a></td>
-      <td><i class="fa fa-times" aria-hidden="true"></i> Delete</td>
+      <td> <a style="color:white;" href='/task/confirm-delete/{{$task->id}}'><i class='fa fa-trash'></i> Delete</a></td>
       <td><a style="color:white;" href="/task/detail/{{$task->id}}"><i class="fa fa-eye" aria-hidden="true"></i>View</a></td>
   </tr>
 

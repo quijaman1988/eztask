@@ -135,4 +135,31 @@ class DashboardController extends Controller
 
   }
 
+  public function getConfirmDelete ($id) {
+
+
+
+    $user = \Auth::user();
+
+    $task = \App\Task::find($id);
+
+    return view('tasks.delete')->with('tasks', $task)
+    ->with('users',$task);
+  }
+
+  public function getDelete ($id) {
+
+    $task  = \App\Task::find($id);
+    $detail = \App\Detail::where('task_id','=',$id)->first();
+    $detail->delete();
+    $task->delete();
+
+      \Session::flash('message',$task->name.' has been deleted');
+
+       return redirect('/dashboard');
+
+  }
+
+
+
 }

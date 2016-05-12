@@ -42,6 +42,8 @@ Route::post('/task/create', 'DashboardController@postCreate');
 Route::get('/task/edit/{id?}', 'DashboardController@editTask');
 Route::post('/task/edit/{id?}', 'DashboardController@editpostTask');
 Route::get('/task/detail/{id?}', 'DashboardController@detailTask');
+Route::get('/task/confirm-delete/{id?}', 'DashboardController@getConfirmDelete');
+Route::get('/task/delete/{id?}', 'DashboardController@getDelete');
 
 
 });

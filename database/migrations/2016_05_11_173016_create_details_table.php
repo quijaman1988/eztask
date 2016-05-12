@@ -17,8 +17,8 @@ class CreateDetailsTable extends Migration
           $table->increments('id');
           $table->timestamps();
 
-          $table->string('url_to_picture');
-          $table->string('comment',500);
+          $table->string('url_to_picture')->default('http://images.clipartpanda.com/task-clipart-task.svg');
+          $table->string('comment',500)->default('None');
 
         });
     }

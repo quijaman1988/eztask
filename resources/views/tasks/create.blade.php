@@ -10,11 +10,12 @@
 @section ('data')
 
 <br>
-<h2>Add a new Task</h2>
+
 
 
 
     <div class="container">
+      <h2>Add a new Task</h2>
     <form method='POST' action='/task/create'>
 
        {{ csrf_field() }}
@@ -47,7 +48,7 @@
 
 
          <label>*Due Date:</label>
-         <input type="date" id="date" name="date" value="{{ old('date') }}">
+         <input id="date" name="date" min="2016-01-01" max="2025-01-01" type="date" value="{{ old('type') }}">
           <div class='error'>{{ $errors->first('date') }}</div> <br>
 
 
@@ -80,7 +81,7 @@
            Fields with an * are required
        </div><br>
 
-       <button type="submit" class="btn btn-primary">Add Task</button>
+       <button style="background-color:#03284E" type="submit" class="btn btn-primary">Add Task</button>
 
        {{--
         <ul class=''>
